@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determination of moisture content in foods in relation to their stability</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body">
+  <main class="main">
+    <div class="header" id="header">
+          <h1 id="ins">Instructions :-</h1>
+          <h1 id="text"> lets start the experiment</h1>
+        </div>
+
+        
+        <div class="footer">
+            
+          <div id="experiment">
+            
+              <!-- ------------------------------  TABLES AND BACKGROUNDS  ----------------------- -->
+              
+              <!-- <img id="workingtable" src="images/working-area-empty1-big-lab1.jpg" alt=""> -->
+              <img id="workingtable" src="images/bgAsset.png" alt="">
+              <img id="startinglab" src="images/my-lab-new.png" alt="">
+
+              
+              <!-- -----------------------------  DESSICATORS SOLUTIONS  ------------------------ -->
+              <div id="stp2">
+                <img class="dp" id="dp1" src="images/dessicator-plate.png" alt="">
+                <img class="dp" id="dp2" src="images/dessicator-plate.png" alt="">
+                <img class="dp" id="dp3" src="images/dessicator-plate.png" alt="">
+                <img class="dp" id="dp4" src="images/dessicator-plate.png" alt="">
+                <img class="dp" id="dp5" onclick="plates()" src="images/dessicator-plate.png" alt="">
+
+
+                <img id="machine" src="images/wheighing-machine.png" alt="">
+                <button id="on" onclick="on1()">ON</button>
+                <button id="tare" onclick="tare1()">TARE</button>
+                <h3 id="reading">00.00</h3>
+
+                <img id="bread" src="images/bread.png" alt="">
+
+                <img class="petri" id="petri1" onclick="pt1()" src="images/petri-dish.png" alt="">
+                <img class="petri" id="petri2" onclick="pt1()" src="images/petri-dish.png" alt="">
+                <img class="petri" id="petri3" onclick="pt1()" src="images/petri-dish.png" alt="">
+                <img class="petri" id="petri4" onclick="pt1()" src="images/petri-dish.png" alt="">
+                <img class="petri" id="petri5" onclick="pt1()" src="images/petri-dish.png" alt="">
+
+                <img class="pbread" id="pbread1" onclick="reverse()" src="images/petri - bread.png" alt="">
+                <img class="pbread" id="pbread2" onclick="reverse()" src="images/petri - bread.png" alt="">
+                <img class="pbread" id="pbread3" onclick="reverse()" src="images/petri - bread.png" alt="">
+                <img class="pbread" id="pbread4" onclick="reverse()" src="images/petri - bread.png" alt="">
+                <img class="pbread" id="pbread5" onclick="reverse()" src="images/petri - bread.png" alt="">
+
+                
+                <img id="echimty" onclick="echimty1()" src="images/chimti.png" alt="">
+                <img id="sbread" onclick="echimty1()" src="images/chimti-sbread.png" alt="">
+                <img id="rbread" onclick="echimty1()" src="images/chimti-rbread.png" alt="">
+
+              
+              
+              </div>
+
+
+              <img class="dsolutionsmall" id="dsolsmall1" src="images/dessicator-solution-small.png" alt="">
+              <img class="dsolutionsmall" id="dsolsmall2" src="images/dessicator-solution-small.png" alt="">
+              <img class="dsolutionsmall" id="dsolsmall3" src="images/dessicator-solution-small.png" alt="">
+              <img class="dsolutionsmall" id="dsolsmall4" src="images/dessicator-solution-small.png" alt="">
+              <img class="dsolutionsmall" id="dsolsmall5" src="images/dessicator-solution-small.png" alt="">
+              <!-- <img class="dsolutionbig" id="dsolbig1" src="images/dessicator-solution-big.png" alt=""> -->
+              <!-- <img class="dsolutionbig" id="dsolbig2" src="images/dessicator-solution-big.png" alt=""> -->
+              <!-- <img class="dsolutionbig" id="dsolbig3" src="images/dessicator-solution-big.png" alt=""> -->
+              <!-- <img class="dsolutionbig" id="dsolbig4" src="images/dessicator-solution-big.png" alt=""> -->
+              <!-- <img class="dsolutionbig" id="dsolbig5" src="images/dessicator-solution-big.png" alt=""> -->
+
+              <!-- ---------------------------------  DESSICATOR BASE -------------------------------- -->
+
+
+              <img class="dessicatorbase" id="base" src="images/dessicator-base-s5.png" alt="">
+              <img class="dessicatorbase" id="base1" src="images/dessicator-base-s4.png" alt="">
+              <img class="dessicatorbase" id="base2" src="images/dessicator-base-s3.png" alt="">
+              <img class="dessicatorbase" id="base3" src="images/dessicator-base-s2.png" alt="">
+              <img class="dessicatorbase" id="base4" src="images/dessicator-base-s1.png" alt="">
+
+              <!-- -------------------------------------  DESSICATOR LID  ----------------------------- -->
+
+              <img class="dessicatorlid" id="lid" onclick="review()" src="images/dessicator-lid.png" alt="">
+              <img class="dessicatorlid" id="lid1" onclick="review()" src="images/dessicator-lid.png" alt="">
+              <img class="dessicatorlid" id="lid2" onclick="review()" src="images/dessicator-lid.png" alt="">
+              <img class="dessicatorlid" id="lid3" onclick="review()" src="images/dessicator-lid.png" alt="">
+              <img class="dessicatorlid" id="lid4" onclick="review()" src="images/dessicator-lid.png" alt="">
+
+
+              <!-- ---------------------------------------  MEASURING CYYLINDER AND SOLUTION  ------------------ -->
+              <div id="stp1">
+
+                <img id="msolution" src="images/measuring-cylinder-solution.png" alt="">
+                <img id="ms" src="images/measuring-cylinder-solution.png" alt="">
+                <img id="m100" onclick="measure()" src="images/measuring cylinder 100.png" alt="">
+                <img id="mcylinder" onclick="measure()" src="images/measuring cylinder.png" alt="">
+  
+                <!-- ------------------------   DISTILLED WATER  ---------------------------- -->
+  
+                <img id="dwatersol" src="images/distilled-water-solution.png" alt="">
+                <img id="distilled" onclick="diswater()" src="images/distilled water.png" alt="">
+                <img id="sulphuricsol" src="images/sulphuric-acid-solution.png" alt="">
+                <img id="sulcap" src="images/sulphuric-acid-cork.png" alt="">
+                <img id="sulphuric" src="images/sulphuric-acid.png" alt="">
+                <img id="pipettesol" src="images/pippete-solution.png" alt="">
+                <img id="pipette" onclick="pipette1()" src="images/pippete.png" alt="">
+              
+              
+              </div>
+
+              <div id="tablesdiv">
+                <h3 id="tabletext">Observation Table</h3>
+                <table id="table1" class="tbl1">
+                  <thead>
+                  <tr>
+                      <th>Concentration of <br> sulphuric acid <br> solution (%)</th>
+                      <th colspan="2">Bread sample on 0 day</th>
+                      <th colspan="2">Bread sample on 3 day</th>
+                      <th colspan="2">Bread sample on 6 day</th>
+                      <th colspan="2">Bread sample on 9 day</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td></td>
+                      <td>Weight</td>
+                      <td>Observation</td>
+                      <td>Weight</td>
+                      <td>Observation</td>
+                      <td>Weight</td>
+                      <td>Observation</td>
+                      <td>Weight</td>
+                      <td>Observation</td>
+                  </tr>
+                  <tr>
+                      <td>0</td>
+                      <td>10</td>
+                      <td>NMG</td>
+                      <td>10.08</td>
+                      <td>MG</td>
+                      <td>10.11</td>
+                      <td>MG</td>
+                      <td>10.21</td>
+                      <td>MG</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>NMG</td>
+                    <td>9.80</td>
+                    <td>NMG</td>
+                    <td>9.71</td>
+                    <td>NMG</td>
+                    <td>9.62</td>
+                    <td>MG</td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>10</td>
+                    <td>NMG</td>
+                    <td>9.52</td>
+                    <td>NMG</td>
+                    <td>9.22</td>
+                    <td>NMG</td>
+                    <td>9.02</td>
+                    <td>NMG</td>
+                  </tr>
+                  <tr>
+                    <td>50</td>
+                    <td>10</td>
+                    <td>NMG</td>
+                    <td>9.24</td>
+                    <td>NMG</td>
+                    <td>8.94</td>
+                    <td>NMG</td>
+                    <td>8.52</td>
+                    <td>NMG</td>
+                  </tr>
+                  <tr>
+                    <td>70</td>
+                    <td>10</td>
+                    <td>NMG</td>
+                    <td>9.15</td>
+                    <td>NMG</td>
+                    <td>8.82</td>
+                    <td>NMG</td>
+                    <td>8.13</td>
+                    <td>NMG</td>
+                  </tr>
+                  </tbody>
+              </table>
+              </div>
+
+              <div id="observe">
+                <h1 id="obtext"> After 3 days.</h1>
+              </div>
+
+
+            
+              
+
+
+
+
+
+               
+                
+                <button id="start" onclick="start()" >START</button>
+            </div>
+        </div>
+
+          <!-----------------------------------         LANGUAGE SELECTOR            --------------------------------------------->
+
+        <!-- <div id="langselector">        
+            <h1 id="lselector">Please select your language</h1>
+            <button id="hindi" onclick="hindi1()">हिंदी</button>
+            <button id="eng" onclick="eng1()">ENG</button>
+        </div> -->
+    </main>
+    <script src="script/project.js"></script>
+    <script src="script/step1.js"></script>
+    <script src="script/step2.js"></script>
+    <script src="script/step3.js"></script>
+    <script src="script/bypass.js"></script>
+</body>
+</html>
