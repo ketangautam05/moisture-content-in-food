@@ -1,15 +1,21 @@
 // start()
-// f=5
+// f=1
 // trial=0
 // msolheight="4%"
 // dessiicator1()
 // dessiicator1()
 // dessiicator1()
+// dessiicator1()
+// diswater()
+// setTimeout(function(){
+//     pipette1()
+
+// },3000)
+// dessiicator1()
 // f=1
 // dessiicator1()
-// pipette1()
 
-// f=100
+// f=400
 // start()
 // plates()
 // setTimeout(function(){

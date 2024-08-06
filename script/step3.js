@@ -25,7 +25,7 @@ function review(){
                             reading.innerText=readupdate
                             ins.innerText="Note down the weight of the sample shown in the weighing scale's screen"
                             setTimeout(function(){
-                                ins.innerText="Click on petridish to replace it in the dessicator"
+                                ins.innerText="Put the petridish again into the dessicator and close the lid."
                                 f=202
                             },8000)
                         },1000)
@@ -174,6 +174,6 @@ function change(){
             if(day==9){
                 ins.innerText=st3
             }
-        },5000)
+        },5000) 
     }
 }

@@ -293,7 +293,7 @@ body{
 #msolution{
     position: absolute;
     height: 0%;
-    width: 2.8%;
+    width: 2.78%;
     /* top: 62%; */
     bottom: 11%;
     left: 9.1%;
@@ -439,9 +439,9 @@ body{
 
 #pipette{
     position: absolute;
-    height: 25%;
-    width: 1.3%;
-    top: 80%;
+    height: 40%;
+    width: 3.5%;
+    top: 72%;
     left: 18.1%;
     rotate: -90deg;
     transition: all;
@@ -449,14 +449,30 @@ body{
 
 }
 
+/* #baloon{
+    position: absolute;
+    height: 8%;
+    width: 3%;
+    top: 89%;
+    left: 9.5%;
+    rotate: -90deg;
+} */
+
+/* #pipettesol{
+    position: absolute;
+    height: 6%;
+    width: 0.85%;
+    bottom: 13%;
+    left: 20.9%;
+    transition: all;
+    transition-duration: 1s;
+} */
+
 #pipettesol{
     position: absolute;
-    /* height: 14%; */
     height: 0%;
-    width: 0.6%;
-    /* top: 65%; */
-    /* bottom: 58.1%; */
-    bottom: 21%;
+    width: 0.8%;
+    bottom: 13%;
     left: 20.9%;
     transition: all;
     transition-duration: 1s;
@@ -580,8 +596,10 @@ body{
 #reading{
     position: absolute;
     top: 79.5%;
-    left: 8.9%;
+    /* left: 8.9%; */
+    right: 85.53%;
     font-family: digital;
+    font-weight: 300;
     color: rgb(138, 234, 3);
     font-size: 2.3vw;
     transition: all;
@@ -657,15 +675,35 @@ body{
     font-size: 8vw;
     justify-items: center;
     opacity: 0%;
+    /* opacity: 100%; */
     visibility: hidden;
+    /* visibility: visible; */
     transition: all;
     transition-duration: 1s;
+    
 }
 
 #obtext{
     position: absolute;
     top: 20%;
     left: 8%;
+    /* top: 5%;
+    left: 40%;
+    font-size: 5vw; */
+    transition: all;
+    transition-duration: 1s;
+}
+
+#inftext{
+    position: absolute;
+    top: 30%;
+    font-size: 2.5vw;
+    font-weight: 300;
+    top: 20%;
+    left: 10%;
+    opacity: 0%;
+    transition: all;
+    transition-duration: 1s;
 }
 
 #tablesdiv{
@@ -677,7 +715,7 @@ body{
     opacity: 0%;
     visibility: hidden;
     /* opacity: 100%;
-    visibility: visible; */
+    visibility: visible;  */
     transition: all;
     transition-duration: 1s;
 }
@@ -705,6 +743,14 @@ body{
     left: 13%;
     font-size: 2vw;
     font-weight: 800;
+}
+
+#fullform{
+    position: absolute;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 80%;
+    left: 15%;
 }
 
 

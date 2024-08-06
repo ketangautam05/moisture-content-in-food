@@ -29,18 +29,21 @@ let dsoltest2="translate(-219%,-130%) rotate(-25deg)"
 let dsolheight="20%"
 // let msolheight="27%"
 let mtest=m100
-let mtestleft="32.9%"
-let mtestleft1="33%"
-let msolleft="34%"
-let msolleft1="31.7%"
+let mtestleft="35.4%"
+let mtestleft1="35.5%"
+let msolleft="36.5%"
+let msolleft1="34.2%"
+let msleft="41.6%"
 let msolbottom="47.2%"
 let msolbottom1="49%"
 // let msolbottom2="11%"
 let dessi=d5
-let msleft="39.1%"
 let ssolheight="15%"
-let psolheight="10%"
-let msolheight="2%"
+let msolheight="27%"
+let psolheight="4.8%"
+let psolbottom="38.3%"
+let psolbottom1="48.1%"
+let psolleft="9.16%"
 
 
 function diswater(){
@@ -52,27 +55,28 @@ function diswater(){
         setTimeout(function(){
             ms.style.visibility="visible"
             setTimeout(function(){
-                msol.style.height="27%"
+                msol.style.height=msolheight
                 dsol.style.height=dsolheight
                 dsol.style.transform=dsoltest2
                 // "translate(-219%,-130%) rotate(-25deg)"
                 setTimeout(function(){
-                    mcyl.style.transitionDuration="0s"
-                    msol.style.transitionDuration="0s"
-                    msol.style.visibility="hidden"
-                    mcyl.style.visibility="hidden"
-                    mtest.style.visibility="visible"
+                    // mcyl.style.transitionDuration="0s"
+                    // msol.style.transitionDuration="0s"
+                    // msol.style.visibility="hidden"
+                    // mtest.style.visibility="visible"
+                    // mcyl.style.visibility="hidden"
                     // m100.style.transitionDuration="1s"
                     dwater.style.transform="translate(0%,0%) rotate(0deg)"
                     dsol.style.transform="translate(0%,0%) rotate(0deg)"
                     ms.style.visibility="hidden"
-                    f=3
-                    // if(dessicator==1){
-                    //     ins.innerText=changeins4
-                    // }
+                    f=5
+                    ins.innerText=changeins4
+                    if(dessicator==1){
+                        f=3
+                        ins.innerText=changeins
+                    }
                     // else{
                     // }
-                    ins.innerText=changeins
                 },1000)
             },500)
         },1000)
@@ -130,9 +134,10 @@ function measure(){
                                 m100.style.top="60%"
                                 ms.style.left="10.7%"
                                 ms.style.height="31%"
-                                f=5
+                                f=1
                                 ins.innerText=changeins4
                                 dessiicator1()
+                                ins.innerText=changeins1
                                 if(dessicator==6){
                                     ins.innerText="click on Next button"
                                     startbutton.style.visibility="visible"
@@ -154,110 +159,218 @@ function measure(){
 
 
 
+// function pipette1(){
+//     if(f==5){
+//         f=6
+//         pipette.style.rotate="0deg"
+//         pipette.style.transform="translate(0%,-250%)"
+//         setTimeout(function(){
+//             pipette.style.transform="translate(190%,-250%)"
+//             sc.style.transform="translate(0%,-50%)"
+//             setTimeout(function(){
+//                 sc.style.transform="translate(50%,-50%) rotate(60deg)"
+//                 pipette.style.transform="translate(190%,-100%)"
+//                 setTimeout(function(){
+//                     psol.style.height=psolheight
+//                     ss.style.height=ssolheight
+//                     setTimeout(function(){
+//                         pipette.style.transform="translate(190%,-250%)"
+//                         psol.style.bottom="58%"
+//                         sc.style.transform="translate(0%,-50%) rotate(0deg)"
+//                         setTimeout(function(){
+//                             pipette.style.transform="translate(-650%,-250%)"
+//                             psol.style.left="10.0%"
+//                             sc.style.transform="translate(0%,0%)"
+//                             setTimeout(function(){
+//                                 pipette.style.transform="translate(-650%,-150%)"
+//                                 psol.style.bottom="32.5%"
+//                                 setTimeout(function(){
+//                                     psol.style.height="0%"
+//                                     msol.style.height=msolheight
+//                                     setTimeout(function(){
+//                                         pipette.style.transform="translate(-650%,-250%)"
+//                                         psol.style.left="20.9%"
+//                                         setTimeout(function(){
+//                                             pipette.style.transform="translate(0%,-250%)"
+//                                             psol.style.bottom="21%"
+//                                             setTimeout(function(){
+//                                                 pipette.style.transform="translate(0%,0%)"
+//                                                 pipette.style.rotate="-90deg"
+//                                                 if(trial==0){
+//                                                     trial=1
+//                                                     f=5
+//                                                     psolheight="10%"
+//                                                     msolheight="6.5%"
+//                                                     ins.innerText=changeins2
+//                                                     if(dessicator==4 || dessicator==5){
+//                                                         ins.innerText=changeins3
+//                                                         psolheight="18.5%"
+//                                                         msolheight="8.6%"
+//                                                     }
+//                                                 }
+//                                                 else if(trial==1){
+//                                                     if(dessicator==4){
+//                                                         f=5
+//                                                         psolheight="10%"
+//                                                         msolheight="12%"
+//                                                         ins.innerText=changeins2
+//                                                         trial=2
+//                                                     }
+//                                                     else if(dessicator==5){
+//                                                         console.log(msolheight)
+//                                                         f=5
+//                                                         if(msolheight=="8.6%"){
+//                                                             trial=1
+//                                                             psolheight="18.5%"
+//                                                             msolheight="15%"
+//                                                             ins.innerText=changeins3
+//                                                         }
+//                                                         else{
+//                                                             psolheight="10%"
+//                                                             msolheight="18.5%"
+//                                                             ins.innerText=changeins2
+//                                                             trial=2
+
+//                                                         }
+//                                                     }
+//                                                     // else if(dessicator==2){
+//                                                     //     f=5
+//                                                     //     psolheight="18.5%"
+//                                                     //     msolheight="5%"
+//                                                     // }
+//                                                     else{
+//                                                         f=1
+//                                                         ins.innerText=changeins1
+//                                                         msolheight="4%"
+//                                                     }
+//                                                     console.log(f)
+//                                                 }
+//                                                 else{
+//                                                     f=3
+//                                                     ins.innerText=changeins
+//                                                      msolheight="4%"
+//                                                      console.log(f)
+//                                                 }
+//                                             },1000)
+//                                         },1000)
+//                                     },1000)
+//                                 },1000)
+//                             },1000)
+//                         },1000)
+//                     },1000)
+//                 },1000)
+//             },1000)
+//         },1000)
+//     }
+// }
+
+
+
+
+
+
+        ////////////////////////////////////////////////////////    new pipette function     //////////////////////////////////////////////////////////
+
+
+
+
+
+
+var new1 
+
+
+///////////////////////////////////////////    NEW PIPETTE FUNCTION     ///////////////////////////////////
+
+
 function pipette1(){
     if(f==5){
         f=6
         pipette.style.rotate="0deg"
-        pipette.style.transform="translate(0%,-250%)"
+        pipette.style.transform="translate(0%,-150%)"
+        sc.style.transform="translate(0%,-50%)"
         setTimeout(function(){
-            pipette.style.transform="translate(190%,-250%)"
-            sc.style.transform="translate(0%,-50%)"
+            pipette.style.transform="translate(40%,-150%)"
+            sc.style.transform="translate(50%,-50%) rotate(60deg)"
             setTimeout(function(){
-                sc.style.transform="translate(50%,-50%) rotate(60deg)"
-                pipette.style.transform="translate(190%,-100%)"
+                pipette.style.transform="translate(40%,-65%)"
                 setTimeout(function(){
                     psol.style.height=psolheight
                     ss.style.height=ssolheight
                     setTimeout(function(){
-                        pipette.style.transform="translate(190%,-250%)"
-                        psol.style.bottom="58%"
-                        sc.style.transform="translate(0%,-50%) rotate(0deg)"
+                        pipette.style.transform="translate(40%,-150%)"
+                        psol.style.bottom=psolbottom1
                         setTimeout(function(){
-                            pipette.style.transform="translate(-650%,-250%)"
-                            psol.style.left="10.0%"
-                            sc.style.transform="translate(0%,0%)"
+                            sc.style.transform="translate(0%,-50%) rotate(0deg)"
+                            pipette.style.transform="translate(-250%,-150%)"
+                            psol.style.left="10.75%"
                             setTimeout(function(){
-                                pipette.style.transform="translate(-650%,-150%)"
-                                psol.style.bottom="32.5%"
+                                pipette.style.transform="translate(-250%,-125%) rotate(12deg)"
+                                sc.style.transform="translate(0%,0%)"
+                                psol.style.rotate="12deg"
+                                psol.style.bottom=psolbottom
+                                psol.style.left=psolleft
+                                // awm.style.visibility="visible"
                                 setTimeout(function(){
                                     psol.style.height="0%"
-                                    msol.style.height=msolheight
+                                    psol.style.opacity="0%"
+                                    msol.style.height="27%"
+                                    psol.style.left="9.16%"
                                     setTimeout(function(){
-                                        pipette.style.transform="translate(-650%,-250%)"
-                                        psol.style.left="20.9%"
-                                        setTimeout(function(){
-                                            pipette.style.transform="translate(0%,-250%)"
-                                            psol.style.bottom="21%"
+                                        // msol.style.transitionDuration="0s"
+                                        // msol.style.visibility="hidden"
+                                        // mcyl.style.transitionDuration="0s"
+                                        // mcyl.style.visibility="hidden"
+                                        // mtest.style.visibility="visible"
+                                        if(dessicator==2){
+                                            // psol.src="images/pippete-solution.png";
+                                        }
+                                        // setTimeout(function(){
+                                            pipette.style.transform="translate(-250%,-150%) rotate(0deg)"
                                             setTimeout(function(){
-                                                pipette.style.transform="translate(0%,0%)"
-                                                pipette.style.rotate="-90deg"
-                                                if(trial==0){
-                                                    trial=1
-                                                    f=5
-                                                    psolheight="10%"
-                                                    msolheight="6.5%"
-                                                    ins.innerText=changeins2
-                                                    if(dessicator==4 || dessicator==5){
-                                                        ins.innerText=changeins3
-                                                        psolheight="18.5%"
-                                                        msolheight="8.6%"
-                                                    }
-                                                }
-                                                else if(trial==1){
-                                                    if(dessicator==4){
-                                                        f=5
-                                                        psolheight="10%"
-                                                        msolheight="12%"
-                                                        ins.innerText=changeins2
-                                                        trial=2
-                                                    }
-                                                    else if(dessicator==5){
-                                                        console.log(msolheight)
-                                                        f=5
-                                                        if(msolheight=="8.6%"){
-                                                            trial=1
-                                                            psolheight="18.5%"
-                                                            msolheight="15%"
-                                                            ins.innerText=changeins3
-                                                        }
-                                                        else{
-                                                            psolheight="10%"
-                                                            msolheight="18.5%"
-                                                            ins.innerText=changeins2
-                                                            trial=2
-
-                                                        }
-                                                    }
-                                                    // else if(dessicator==2){
-                                                    //     f=5
-                                                    //     psolheight="18.5%"
-                                                    //     msolheight="5%"
-                                                    // }
-                                                    else{
-                                                        f=1
-                                                        ins.innerText=changeins1
-                                                        msolheight="4%"
-                                                    }
-                                                    console.log(f)
-                                                }
-                                                else{
-                                                    f=1
-                                                    ins.innerText=changeins1 
-                                                     msolheight="4%"
-                                                     console.log(f)
-                                                }
+                                                pipette.style.transform="translate(0%,-150%)"
+                                                setTimeout(function(){
+                                                    pipette.style.transform="translate(0%,0%)"
+                                                    pipette.style.rotate="-90deg"
+                                                    psol.style.left="20.9%"
+                                                    psol.style.rotate="0deg"
+                                                    psol.style.bottom="13%"
+                                                    psol.style.opacity="100%"
+                                                    setTimeout(function(){
+                                                        f=3
+                                                        ins.innerText=changeins
+                                                    },1000)
+                                                },1000)
                                             },1000)
-                                        },1000)
+                                        // },1000)
                                     },1000)
                                 },1000)
                             },1000)
                         },1000)
                     },1000)
                 },1000)
+
             },1000)
         },1000)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -270,16 +383,16 @@ function dessiicator1(){
         dsoltest1="translate(-219%,-130%) rotate(-25deg)"
         dsoltest2="translate(-218%,-145%) rotate(-25deg)"
         mtest=m100
-        mtestleft="44.9%"
-        mtestleft1="45%"
-        msolleft="46%"
-        msolleft1="43.7%"
+        mtestleft="47.4%"
+        mtestleft1="47.5%"
+        msolleft="48.5%"
+        msolleft1="46.2%"
         msolbottom="47.2%"
         msolbottom1="49%"
-        msleft="51.1%"
+        msleft="53.6%"
+        msolheight="24%"
         ssolheight="15%"
         changeins="Click on measuring cylinder to place this measured solution into S2 labelled dessicator"
-        changeins4="Click on pipette to take 20mL sulphuric acid and pour it in measuring cylinder"
 
 
     }
@@ -291,18 +404,24 @@ function dessiicator1(){
         dsoltest1="translate(-218%,-145%) rotate(-25deg)"
         dsoltest2="translate(-215%,-163%) rotate(-25deg)"
         mtest=m100
-        mtestleft="56.9%"
-        mtestleft1="57%"
-        msolleft="58%"
-        msolleft1="55.7%"
+        mtestleft="59.4%"
+        mtestleft1="59.5%"
+        msolleft="60.5%"
+        msolleft1="58.2%"
+        msleft="65.6%"
         msolbottom="47.2%"
         msolbottom1="49%"
-        msleft="63.1%"
+        msolheight="18.5%"
         ssolheight="13%"
-        psolheight="18.5%"
+        psolheight="10.6%"
+        psolbottom="38.3%"
+        psolbottom1="48.1%"
+        psolleft="9.44%"
         trial=0
+        psol.src="images/pippete-solution30ml.png";
         changeins="Click on measuring cylinder to place this measured solution into S3 labelled dessicator"
         changeins1 = "Click on distilled water bottle to measure 70mL of distilled water" 
+        changeins4 = "Click on pipette to take 30mL sulphuric acid and pour it in measuring cylinder"
         
     }
 
@@ -314,18 +433,24 @@ function dessiicator1(){
         dsoltest1="translate(-215%,-163%) rotate(-25deg)"
         dsoltest2="translate(-210%,-188%) rotate(-25deg)"
         mtest=m100
-        mtestleft="68.9%"
-        mtestleft1="69%"
-        msolleft="70%"
-        msolleft1="67.7%"
+        mtestleft="71.4%"
+        mtestleft1="71.5%"
+        msolleft="72.5%"
+        msolleft1="70.2%"
+        msleft="77.6%"
         msolbottom="47.2%"
         msolbottom1="49%"
-        msleft="75.1%"
+        msolheight="12%"
         ssolheight="11%"
-        psolheight="18.5%"
+        psolheight="16.1%"
+        psolbottom1="48.1%"
+        psolbottom="38.3%"
+        psolleft="9.7%"
         trial=0
+        psol.src="images/pippete-solution50ml.png";
         changeins="Click on measuring cylinder to place this measured solution into S4 labelled dessicator"
         changeins1 = "Click on distilled water bottle to measure 50mL of distilled water" 
+        changeins4 = "Click on pipette to take 50mL sulphuric acid and pour it in measuring cylinder"
     }
     
 
@@ -337,18 +462,24 @@ function dessiicator1(){
         dsoltest1="translate(-210%,-188%) rotate(-25deg)"
         dsoltest2="translate(-210%,-203%) rotate(-25deg)"
         mtest=m100
-        mtestleft="80.9%"
-        mtestleft1="81%"
-        msolleft="82%"
-        msolleft1="79.7%"
+        mtestleft="83.4%"
+        mtestleft1="83.5%"
+        msolleft="84.5%"
+        msolleft1="82.2%"
+        msleft="89.6%"
         msolbottom="47.2%"
         msolbottom1="49%"
-        msleft="87.1%"
+        msolheight="6.7%"
         ssolheight="9%"
-        psolheight="18.5%"
+        psolheight="21.5%"
+        psolbottom="38.3%"
+        psolbottom1="48.1%"
+        psolleft="9.93%"
         trial=0
+        psol.src="images/pippete-solution.png";
         changeins="Click on measuring cylinder to place this measured solution into S5 labelled dessicator"
         changeins1 = "Click on distilled water bottle to measure 30mL of distilled water" 
+        changeins4 = "Click on pipette to take 70mL sulphuric acid and pour it in measuring cylinder"
     }
     
 

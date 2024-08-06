@@ -40,6 +40,7 @@ let ins = document.querySelector("#text")
 let stp1 = document.querySelector("#stp1")
 let stp2 = document.querySelector("#stp2")
 let tablesdiv = document.querySelector("#tablesdiv")
+let inftext = document.querySelector("#inftext")
 
 let statuses = 0
 let f=0
@@ -90,6 +91,25 @@ function start(){
         observer()
         tablesdiv.style.opacity="100%"
         f=500
+        setTimeout(function(){
+            ins.innerText="Click 'Inference' button to see the experiment Outcome"
+            startbutton.innerText="Inference"
+            startbutton.style.visibility="visible"
+        },5000)
+    }
+    else if(f==500){
+        observe.style.visibility="visible"
+        observe.style.opacity="100%"
+        obtext.style.top="5%"
+        obtext.style.left="40%"
+        obtext.style.fontSize="5vw"
+        startbutton.style.visibility="hidden"
+        obtext.innerText="Inference"
+        tablesdiv.style.opacity="0%"
+        setTimeout(function(){
+            inftext.style.opacity="100%"
+            tablesdiv.style.visibility="hidden"
+        },2000)
     }
 }
 
