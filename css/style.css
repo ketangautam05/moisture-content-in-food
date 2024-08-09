@@ -30,6 +30,7 @@ body{
     display: block;
     position: relative;
     background-color: rgb(170, 165, 121);
+    overflow: hidden;
 }
 
 .main{
